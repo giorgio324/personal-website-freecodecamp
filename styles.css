@@ -1,0 +1,250 @@
+:root {
+    --transition: all 0.3s linear;
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+label {
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+body {
+    text-transform: capitalize;
+}
+
+.section_center {
+    width: 95vw;
+    margin: 0 auto;
+    max-width: 1450px;
+}
+#welcome-section{
+    min-height: 100vh;
+    background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome_section_text h1{
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+}
+.welcome_section_text p{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--main-red);
+}
+
+.project-title h1{
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+}
+.break{
+    height: 0.1rem;
+    background: white;
+    width: 45vh;
+    justify-self: center;
+    align-self: center;
+    margin: 1rem;
+}
+#projects{
+    background: var(--main-blue);
+    padding-top: 5.5rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.projects_links{
+    margin-top: 2rem;
+}
+.project_name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    color: white;
+    background: var(--main-gray);
+    border-bottom-left-radius: 8px ;
+    border-bottom-right-radius: 8px ;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.tribute:hover .name{
+    opacity: 1;
+}
+.name{
+    color: rgb(255, 153, 0);
+    opacity: 0;
+    transition: var(--transition);
+    font-size: 2rem;
+    padding: 0.5rem;
+    font-weight: 1400;
+}
+.project-tile{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.project_card{
+    padding: 1rem;
+}
+.image{
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+}
+.see_all{
+    font-size: 1.3rem;
+    font-weight: 530;
+    background: var(--main-gray);
+    transition: var(--transition);
+    justify-self: center;
+    align-self: center;
+    color: white;
+    padding: 11px 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.see_all:hover{
+    background-color: var(--main-red);
+}
+#navbar {
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-red);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+    z-index: 2;
+}
+.nav-link {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    transition: var(--transition);
+    color: white;
+}
+.nav_links{
+    display: flex;
+}
+
+.nav-link:hover {
+    background-color: var(--main-blue);
+}
+
+#contact{
+    background: var(--main-gray);
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact_title h1{
+    font-size: 5rem;
+    color: white;
+}
+.contact_title p{
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+}
+.contact_links{
+    display: flex;
+    min-width: 400px;
+    padding: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contact_links a{
+    color: white;
+}
+.profile-link{
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+.profile-link:hover{
+    color: var(--main-red);
+    transform: translateY(-5px);
+}
+.footer_center{
+    display: flex;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: var(--main-gray);
+    border-top: 3px solid var(--main-red);
+    padding: 2.5rem;
+}
+.footer_center p{
+    font-size: 1.25rem;
+    padding: 0 3rem;
+}
+.copy{
+    flex: 0 0 calc(50% - 2rem);
+}
+@media screen and (min-width:992px) {
+    .project_card{
+        flex: 0 0 calc(33.33% - 1rem);
+    }
+    .break{
+        width: 95vh;
+    }
+    .tribute{
+        transform: scale(1.05);
+    }
+    #navbar {
+        justify-content: flex-end;
+    }
+    .nav_links{
+        margin-right: 3rem;
+    }
+}
+@media screen and (min-width:625px) and (max-width:992px) {
+    .project_card{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .break{
+        width: 65vh;
+    }
+}
